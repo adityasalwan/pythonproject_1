@@ -1,5 +1,6 @@
 #import statement
 from spy_detail import spy_name, spy_salutation, spy_age, spy_rating
+from start_chat import start_chat
 
 print("Let's Get Started")
 question = print("Do you want to continue as " + spy_salutation + " " + spy_name + " (Y/N) : ")
@@ -7,7 +8,8 @@ existing = input(question)
 #validating users input
 if (existing == "y" or existing == "Y") :
     #logic
-    pass
+    start_chat(spy_name, spy_age, spy_rating)
+
 elif (existing == "n" or existing == "N") :
     #new user code
     spy_name = input("Provide your name here : ")
